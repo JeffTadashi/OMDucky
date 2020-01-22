@@ -1,6 +1,6 @@
 REM | SimpleWebOpener.txt
 REM |
-REM | This is a script for the O.MG Cable to simply open a web page in Windows 10.
+REM | This is a script for the O.MG Cable to simply open a web page in Windows 10/7.
 REM |
 REM | Can be used for fake phishing websites (see gophish.com), or for BSOD pranks (see fakebsod.com or geekprank.com)
 REM |
