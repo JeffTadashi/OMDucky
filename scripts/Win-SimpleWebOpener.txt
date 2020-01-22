@@ -1,4 +1,4 @@
-REM | SimpleWebOpener.txt
+REM | Win-SimpleWebOpener.txt
 REM |
 REM | This is a script for the O.MG Cable to simply open a web page in Windows 10/7.
 REM |
