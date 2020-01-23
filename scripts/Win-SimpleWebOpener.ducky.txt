@@ -10,14 +10,14 @@ REM | Written by JeffTadashi
 REM | https://github.com/JeffTadashi/omducky/
 REM |
 DELAY 2000
-GUI R
+GUI r
 DELAY 1000
 REM ~~ | Change line below to desired browser: chrome, firefox, iexplore, etc.
 STRING chrome
 ENTER
 DELAY 4000
 REM | Alt+D below moves cursor focus to the URL bar. This is needed for Internet Explorer and Edge (Does not impact Chrome or Firefox)
-ALT D
+ALT d
 REM ~~ | Change line below to desired URL
 STRING http://fakebsod.com/windows-8-and-10
 ENTER
