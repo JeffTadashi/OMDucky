@@ -7,7 +7,7 @@ REM |
 REM | See all "REM ~~" tilde lines below for code that needs to be modified
 REM |
 REM | Written by JeffTadashi
-REM | https://github.com/JeffTadashi/o.mg.magicite/
+REM | https://github.com/JeffTadashi/omducky/
 REM |
 VID 045E
 PID 0048
