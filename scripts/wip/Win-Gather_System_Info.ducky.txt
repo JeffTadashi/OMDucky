@@ -67,8 +67,8 @@ ENTER
 DELAY 2000
 REM ~~ | Change p@ssw0rd! below to the ssh user's password
 STRING yes
-DELAY 5000
 ENTER
+DELAY 5000
 STRING del sys
 ENTER
 STRING exit
