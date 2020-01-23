@@ -1,0 +1,28 @@
+REM | Win-SimpleWebOpener.omg.txt
+REM |
+REM | This is a script for the Rubber Ducky to simply open a web page in Windows 10/7.
+REM |
+REM | Can be used for fake phishing websites (see gophish.com), or for BSOD pranks (see fakebsod.com or geekprank.com)
+REM |
+REM | See all "REM ~~" tilde lines below for code that needs to be modified
+REM |
+REM | Written by JeffTadashi
+REM | https://github.com/JeffTadashi/omducky/
+REM |
+VID 045E
+PID 0048
+MAN Microsoft
+PRO Windows Defender Update
+GUI R
+DELAY 1000
+REM ~~ | Change line below to desired browser: chrome, firefox, iexplore, etc.
+STRING chrome
+ENTER
+DELAY 4000
+REM | Alt+D below moves cursor focus to the URL bar. This is needed for Internet Explorer and Edge (Does not impact Chrome or Firefox)
+ALT D
+REM ~~ | Change line below to desired URL
+STRING http://fakebsod.com/windows-8-and-10
+ENTER
+REM ~~ | Change line below to "GUI UP" to maximize screen. Change line below to "F11" to fullscreen.
+F11
