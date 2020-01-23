@@ -17,5 +17,5 @@ DELAY 2
 REM | Below is for password (change from "yes"
 STRING yes
 ENTER
-REM NOTES: nslookup %logonserver%
+REM NOTES: nslookup %logonserver:~2%
 
