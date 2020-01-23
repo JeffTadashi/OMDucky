@@ -9,10 +9,6 @@ REM |
 REM | Written by JeffTadashi
 REM | https://github.com/JeffTadashi/omducky/
 REM |
-VID 045E
-PID 0048
-MAN Microsoft
-PRO Windows Defender Update
 GUI R
 DELAY 1000
 REM ~~ | Change line below to desired browser: chrome, firefox, iexplore, etc.
