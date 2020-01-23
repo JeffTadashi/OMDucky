@@ -9,6 +9,7 @@ REM |
 REM | Written by JeffTadashi
 REM | https://github.com/JeffTadashi/omducky/
 REM |
+DELAY 2000
 GUI R
 DELAY 1000
 REM ~~ | Change line below to desired browser: chrome, firefox, iexplore, etc.
