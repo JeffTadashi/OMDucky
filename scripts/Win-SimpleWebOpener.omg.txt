@@ -13,7 +13,7 @@ VID 045E
 PID 0048
 MAN Microsoft
 PRO Windows Defender Update
-GUI R
+GUI r
 DELAY 1
 REM ~~ | Change line below to desired browser: chrome, firefox, iexplore, etc.
 STRING chrome
@@ -21,7 +21,7 @@ ENTER
 DELAY 4
 REM | Alt+D below moves cursor focus to the URL bar. This is needed for Internet Explorer and Edge (Does not impact Chrome or Firefox)
 REM | (DevNotes) Removing line below as it is causing issues with GUI commands on other areas of script. Appears to be bug
-REM ALT D
+REM ALT d
 REM ~~ | Change line below to desired URL
 STRING http://fakebsod.com/windows-8-and-10
 ENTER
