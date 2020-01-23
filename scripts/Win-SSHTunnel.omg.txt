@@ -1,3 +1,4 @@
+REM | (Work in Progress! See Ducky version for more info and actual functionality)
 REM |
 REM | Written by JeffTadashi
 REM | https://github.com/JeffTadashi/omducky/
