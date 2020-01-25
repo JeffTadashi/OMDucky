@@ -25,6 +25,7 @@ STRING powershell
 ENTER
 DELAY 2000
 REM | Command below erases the "Run" history. This is optional.
+REM | (DevNotes) To Test: change "Remove-ItemProperty" to "rp" for shortness
 STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue"
 ENTER
 DELAY 2000
