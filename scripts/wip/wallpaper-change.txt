@@ -1,0 +1,87 @@
+REM | WALLPAPER-CHANGE
+REM |
+REM | This is a script to download and change the wallpaper in Windows 10
+REM |
+REM | In order to work: 
+REM | - Windows must be using the default "Photos" app for opening photos 
+REM | - Internet Explorer was used at least once (and initial setup pop-ups, etc, are not present)
+REM |
+REM | See all "REM ~~" tilde lines below for code that needs to be modified
+REM |
+REM | Written by JeffTadashi (based off other Hak5 sources)
+REM | https://github.com/JeffTadashi/luk-ducky
+REM |
+REM |
+REM |
+REM |
+DELAY 1000
+CONTROL ESCAPE
+DELAY 2000
+REM ~~Change link below to whatever you want the downloaded image/wallpaper to be
+STRING iexplore http://www.thecuriosityworkshop.com/wp-content/uploads/2015/03/01-rubberduck-hongkong.jpg
+DELAY 5000
+ENTER
+REM (Delay below waits for IE to open. To be safe, it's fairly long)
+DELAY 9000
+REM (Typing CNTL + 1 to switch to first tab. Sometimes IE opens a second tab on first startup)
+CONTROL 1
+DELAY 500
+CONTROL s
+DELAY 2000
+ENTER
+DELAY 500
+REM (Now trying to close IE)
+ALT F4
+REM (General wait until next step)
+DELAY 8000
+CONTROL ESCAPE
+DELAY 2000
+REM ~~Change string below to match the filename of the image downloaded. This uses search, so best that the image has a unique name.
+STRING 01-rubberduck-hongkong.jpg
+DELAY 5000
+ENTER
+REM (This is the wait for Photos album to open)
+DELAY 8000
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+TAB
+DELAY 80
+ENTER
+DELAY 500
+DOWN
+DELAY 80
+DOWN
+DELAY 80
+DOWN
+DELAY 80
+DOWN
+DELAY 80
+DOWN
+DELAY 80
+DOWN
+DELAY 80
+ENTER
+DELAY 500
+DOWN
+DELAY 80
+ENTER
+DELAY 500
+ALT F4
