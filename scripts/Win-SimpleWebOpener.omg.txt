@@ -1,6 +1,6 @@
-REM | Win-SimpleWebOpener.omg.txt
+REM | Win-SimpleWebOpener
 REM |
-REM | This is a script for the O.MG Cable to simply open a web page in Windows 10/7.
+REM | This is a script to simply open a web page in Windows 10/7.
 REM |
 REM | Can be used for fake phishing websites (see gophish.com), or for BSOD pranks (see fakebsod.com or geekprank.com)
 REM |
@@ -14,16 +14,16 @@ PID 0048
 MAN Microsoft
 PRO Windows Defender Update
 GUI r
-DELAY 1
+DELAY 1000
 REM ~~ | Change line below to desired browser: chrome, firefox, iexplore, etc.
 STRING chrome
 ENTER
-DELAY 4
+DELAY 4000
 REM | Alt+D below moves cursor focus to the URL bar. This is needed for Internet Explorer and Edge (Does not impact Chrome or Firefox)
-REM | (DevNotes) Removing line below as it is causing issues with GUI commands on other areas of script. Appears to be bug
-REM ALT d
+ALT d
 REM ~~ | Change line below to desired URL
 STRING http://fakebsod.com/windows-8-and-10
 ENTER
 REM ~~ | Change line below to "GUI UP" to maximize screen. Change line below to "F11" to fullscreen.
 F11
+

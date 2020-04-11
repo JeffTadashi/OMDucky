@@ -1,6 +1,6 @@
-REM | Win-SimpleWebOpener.ducky.txt
+REM | Win-SimpleWebOpener
 REM |
-REM | This is a script for the Rubber Ducky to simply open a web page in Windows 10/7.
+REM | This is a script to simply open a web page in Windows 10/7.
 REM |
 REM | Can be used for fake phishing websites (see gophish.com), or for BSOD pranks (see fakebsod.com or geekprank.com)
 REM |
@@ -9,7 +9,7 @@ REM |
 REM | Written by JeffTadashi
 REM | https://github.com/JeffTadashi/omducky/
 REM |
-DELAY 2000
+DELAY 2222
 GUI r
 DELAY 1000
 REM ~~ | Change line below to desired browser: chrome, firefox, iexplore, etc.
