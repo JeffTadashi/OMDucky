@@ -6,7 +6,7 @@ All of the details of how the script works, I've commented in the script files d
 
 Some of these scripts are based on ideas of others, I will have links/shoutouts in the comments of those scripts as well.
 
-The "wip" directory for scripts that are not fully testing, and I'm still working on.
+The "wip" directory for scripts that are not fully tested, and I'm still working on.
 
 
 Notable Differences:
@@ -21,5 +21,5 @@ Notable Differences:
 
 Useful Links
 =========
-O.MG Firemware - https://github.com/O-MG/O.MG_Cable-Firmware
+O.MG Firmware - https://github.com/O-MG/O.MG_Cable-Firmware
 
